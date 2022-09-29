@@ -14,7 +14,7 @@
     <title>Rock, Paper, Scissors, Lizard, Spock</title>
 </head>
 
-<!-- Body with header and main section -->
+<!-- Body with header, main section and footer -->
 
 <body>
     <header>
@@ -30,7 +30,28 @@
             <button aria-level="Lizard" data-choice="3" class="controls">Lizard</button>
             <button aria-level="Spock" data-choice="4" class="controls">Spock</button>
         </div>
+
+        <div id="player">
+            <img src="assets/images/player-image.webp" alt="Game instructions, player-side">
+            <h3 class="scores">
+                Your Score: <span id="player-score">0</span>
+            </h3>
+        </div>
+
+        <div id="computer">
+            <img src="assets/images/computer-image.webp" alt="Game instructions, computer-side">
+            <h3 class="scores">
+                Computer Score: <span id="computer-score">0</span>
+            </h3>
+        </div>
     </section>
 
+    <footer>
+        <h2>Enjoy different kind of challenges!</h2>
+        <p>Pick out one of the three classic modes or be first to 10 points.</p>
+        <p>Changing mode will reset the game.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
