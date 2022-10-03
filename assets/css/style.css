@@ -1,0 +1,40 @@
+/* Basic Setup */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+* {
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: quicksand, sans—serif;
+}
+
+/* Header and Footer Elements */
+
+header {
+    max-height: 6rem;
+    text-align: center;
+    margin: 0.6em;
+    padding: 0.3em;
+}
+
+footer {
+    background-color: #292929;
+    bottom: 0;
+    color: #fafafa;
+    left: 0;
+    min-height: 6rem;
+    padding-top: 0.1em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
