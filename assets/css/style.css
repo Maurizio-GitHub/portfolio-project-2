@@ -21,10 +21,9 @@ body {
 /* Header and Footer Elements */
 
 header {
-    max-height: 6rem;
+    max-height: 7rem;
     text-align: center;
-    margin: 0.6em;
-    padding: 0.3em;
+    padding: 1rem;
 }
 
 footer {
@@ -32,9 +31,62 @@ footer {
     bottom: 0;
     color: #fafafa;
     left: 0;
-    min-height: 6rem;
-    padding-top: 0.1em;
+    min-height: 7rem;
+    padding: 0.3em;
     position: absolute;
     text-align: center;
     width: 100%;
+}
+
+/* Game Area */
+
+#game-area {
+    margin: 1% auto;
+    text-align: center;
+    width: 75%;
+}
+
+h2 {
+    padding-bottom: 1rem;
+}
+
+.controls {
+    color: #fafafa;
+    background-color: #363636;
+    display: inline-block;
+    height: 2.5rem;
+    margin: 0.6rem 0.2rem 1.2em;
+    width: 5rem;
+}
+
+#player {
+    float: left;
+    width: 50%;
+}
+
+#player-image {
+    width: 70%
+}
+
+#computer {
+    float: right;
+    width: 50%;
+}
+
+#computer-image {
+    width: 70%
+}
+
+#game-mode {
+    clear: both;
+    padding: 1rem;
+}
+
+#mode-selection {
+    display: block;
+    margin: 0 auto;
+}
+
+#outcome {
+    min-height: 2rem;
 }
