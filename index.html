@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Head with metadata and keywords for SEO -->
+<!-- Head with metadata, keywords for SEO, links to external resources and page title -->
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
     <title>Rock, Paper, Scissors, Lizard, Spock</title>
 </head>
 
-<!-- Body with header, main section and footer -->
+<!-- Body with header, game area section and footer -->
 
 <body>
     <header>
@@ -45,14 +45,8 @@
             </h3>
         </div>
 
-        <div id="game-mode">
-            <label for="mode-selection">Select a game mode:</label>
-            <select id="mode-selection" name="mode-selection">
-                <option value="3 out of 5">3 out of 5</option>
-                <option value="4 out of 7">4 out of 7</option>
-                <option value="5 out of 9">5 out of 9</option>
-                <option value="super 10">Super 10!</option>
-            </select>
+        <div id="moves-left">
+            <h3>Moves Left: 9</h3>
         </div>
 
         <div id="outcome">
@@ -61,11 +55,13 @@
     </section>
 
     <footer>
-        <h2>Enjoy different kind of challenges!</h2>
-        <p>Pick out one of the three classic game modes or be first to 10 points!</p>
-        <p>Changing game mode will reset the match.</p>
+        <h2>Enjoy the challenge!</h2>
+        <p>Each game consists of 9 moves: there cannot be a tie!</p>
     </footer>
+
+    <!-- Link to the javascript file containing the game logic -->
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

@@ -31,7 +31,7 @@ footer {
     bottom: 0;
     color: #fafafa;
     left: 0;
-    min-height: 7rem;
+    min-height: 6rem;
     padding: 0.3em;
     position: absolute;
     text-align: center;
@@ -47,11 +47,13 @@ footer {
 }
 
 h2 {
-    padding-bottom: 1rem;
+    padding: 0.5rem 0 1.5rem 0;
 }
 
 .controls {
+    border-radius: 0.5rem;
     color: #fafafa;
+    cursor: pointer;
     background-color: #363636;
     display: inline-block;
     height: 2.5rem;
@@ -61,32 +63,63 @@ h2 {
 
 #player {
     float: left;
+    padding-top: 2rem;
     width: 50%;
 }
 
 #player-image {
-    width: 70%
+    border-radius: 1rem;
+    width: 90%
 }
 
 #computer {
     float: right;
+    padding-top: 2rem;
     width: 50%;
 }
 
 #computer-image {
-    width: 70%
+    border-radius: 1rem;
+    width: 90%
 }
 
-#game-mode {
+.scores {
+    font-size: 87%;
+}
+
+/* Game Area Messages and Actions */
+
+#moves-left {
     clear: both;
-    padding: 1rem;
-}
-
-#mode-selection {
-    display: block;
-    margin: 0 auto;
+    font-size: 87%;
+    padding: 1rem 0 1rem 0;
 }
 
 #outcome {
+    font-weight: 600;
     min-height: 2rem;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 600px) {
+    #player-image {
+        width: 67%
+    }
+
+    #computer-image {
+        width: 67%
+    }
+
+    .scores {
+        font-size: 110%;
+    }
+
+    #moves-left {
+        font-size: 110%;
+    }
+
+    #outcome {
+        font-size: 110%;
+    }
 }
