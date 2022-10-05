@@ -60,13 +60,13 @@ button {
     width: 5rem;
 }
 
-.actions {
+.moves {
     background-color: #7398cb;
     color: #202020;
     display: inline-block;
 }
 
-.actions:hover {
+.moves:hover {
     background-color: #202020;
     color: #7398cb;
 }
@@ -105,7 +105,7 @@ button {
     padding: 1rem 0 1rem 0;
 }
 
-#outcome {
+#outcomes-area {
     font-weight: 600;
 }
 
@@ -141,7 +141,7 @@ button {
         font-size: 105%;
     }
 
-    #outcome {
+    #outcomes-area {
         font-size: 110%;
     }
 }
