@@ -50,15 +50,25 @@ h2 {
     padding: 0.5rem 0 1.5rem 0;
 }
 
-.controls {
+button {
     border-radius: 0.5rem;
-    color: #fafafa;
     cursor: pointer;
-    background-color: #363636;
-    display: inline-block;
+    font-size: 105%;
+    font-weight: 600;
     height: 2.5rem;
     margin: 0.6rem 0.2rem 1.2em;
     width: 5rem;
+}
+
+.actions {
+    background-color: #7398cb;
+    color: #202020;
+    display: inline-block;
+}
+
+.actions:hover {
+    background-color: #202020;
+    color: #7398cb;
 }
 
 #player {
@@ -87,7 +97,7 @@ h2 {
     font-size: 87%;
 }
 
-/* Game Area Messages and Actions */
+/* Game Area Messages */
 
 #moves-left {
     clear: both;
@@ -97,7 +107,19 @@ h2 {
 
 #outcome {
     font-weight: 600;
-    min-height: 2rem;
+}
+
+/* Reload Button */
+
+#reload {
+    background-color: #FDBA41;
+    color: #202020;
+    display: none;
+}
+
+#reload:hover {
+    background-color: #202020;
+    color: #FDBA41;
 }
 
 /* Media Queries */
@@ -116,7 +138,7 @@ h2 {
     }
 
     #moves-left {
-        font-size: 110%;
+        font-size: 105%;
     }
 
     #outcome {
