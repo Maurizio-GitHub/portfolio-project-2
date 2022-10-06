@@ -5,6 +5,8 @@ const playerScore = document.getElementById('player-score');
 const playerImage = document.getElementById('player-image');
 const computerScore = document.getElementById('computer-score');
 const computerImage = document.getElementById('computer-image');
+const message = document.getElementById('message');
+const countdown = document.getElementById('countdown');
 const result = document.getElementById('result');
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
@@ -26,7 +28,7 @@ function runGame(playerChoice) {
     playerImage.src = `assets/images/${choices[playerChoice]}.webp`;
     playerImage.alt = choices[playerChoice];
 
-    const computerChoice = Math.floor(Math.random() * 3);
+    const computerChoice = Math.floor(Math.random() * 5);
 
     computerImage.src = `assets/images/${choices[computerChoice]}.webp`;
     computerImage.alt = choices[computerChoice];
@@ -51,7 +53,7 @@ function checkWinner(playerImageAlt, computerImageAlt) {
         case 'lizard vs spock':
         case 'spock vs scissors':
         case 'spock vs rock':
-            return 'You Won!'
+            return 'You Won!';
         case 'scissors vs rock':
         case 'lizard vs rock':
         case 'rock vs paper':
@@ -62,17 +64,12 @@ function checkWinner(playerImageAlt, computerImageAlt) {
         case 'spock vs lizard':
         case 'scissors vs spock':
         case 'rock vs spock':
-            return 'Computer Won!'
-        case 'rock vs scissors':
-        case 'rock vs lizard':
-        case 'paper vs rock':
-        case 'paper vs spock':
-        case 'scissors vs paper':
-        case 'scissors vs lizard':
-        case 'lizard vs paper':
-        case 'lizard vs spock':
-        case 'spock vs scissors':
-        case 'spock vs rock':
-            return 'Draw!'
+            return 'Computer Won!';
+        case 'rock vs rock':
+        case 'paper vs paper':
+        case 'scissors vs scissors':
+        case 'lizard vs lizard':
+        case 'spock vs spock':
+            return 'Draw!';
     }
 }
