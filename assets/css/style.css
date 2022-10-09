@@ -117,6 +117,8 @@ button {
     background-color: #FDBA41;
     color: #202020;
     display: none;
+    margin: 1rem auto;
+    text-align: center;
 }
 
 #reload:hover {

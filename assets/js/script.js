@@ -5,12 +5,13 @@ const playerScore = document.getElementById('player-score');
 const playerImage = document.getElementById('player-image');
 const computerScore = document.getElementById('computer-score');
 const computerImage = document.getElementById('computer-image');
-const message = document.getElementById('message');
+const message = document.getElementById('display-message');
 const countdown = document.getElementById('countdown');
 const result = document.getElementById('result');
+const reloadButton = document.getElementById('reload');
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
-// Event listener for buttons representing a player move; runGame function is called after user choice:
+// Event listener for buttons representing a player move; runGame function is called:
 
 for (const move of moves) {
     move.addEventListener('click', function () {
@@ -72,4 +73,41 @@ function checkWinner(playerImageAlt, computerImageAlt) {
         case 'spock vs spock':
             return 'Draw!';
     }
+}
+
+/**
+ * Manager function: it accepts a string as a parameter to appropriately modify the page after each result.
+ */
+function gameManager(resultInnerText) {
+    if (countdown.innerText > 0) {
+        --countdown.innerText;
+    }
+
+    if (resultInnerText === 'You Won!') {
+        playerScore.innerText++;
+    } else if (resultInnerText === 'Computer Won!') {
+        computerScore.innerText++;
+    }
+
+    if (countdown.innerText === 0) {
+        message.innerText = 'Tie-break!';
+    }
+
+    if (Math.abs(playerScore.innerText - computerScore.innerText) > countdown.innerText) {
+        if (playerScore.innerText > computerScore.innerText) {
+            message.innerText = 'Game Over';
+            result.innerText = 'You Won The Match!';
+            for (const move of moves) {move.style.display="none";}
+            reloadButton.style.display = 'block';
+        } else {
+            message.innerText = 'Game Over';
+            result.innerText = 'You Lost The Match!';
+            for (const move of moves) {move.style.display="none";}
+            reloadButton.style.display = 'block';
+        }
+    }
+
+    reloadButton.addEventListener('click', function () {
+        window.location.reload();
+    })
 }
