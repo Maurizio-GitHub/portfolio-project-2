@@ -7,6 +7,7 @@ const computerScore = document.getElementById('computer-score');
 const computerImage = document.getElementById('computer-image');
 const message = document.getElementById('display-message');
 const countdown = document.getElementById('countdown');
+const draw = document.getElementById('draw-event');
 const result = document.getElementById('result');
 const reloadButton = document.getElementById('reload');
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
@@ -79,34 +80,34 @@ function checkWinner(playerImageAlt, computerImageAlt) {
  * Manager function: it accepts a string as a parameter to appropriately modify the page after each result.
  */
 function gameManager(resultInnerText) {
+    // Counter management logic, necessary to handle an extended tie-break phase without having a countdown going below zero (see Game Over logic):
     if (countdown.innerText > 0) {
-        --countdown.innerText;
+        countdown.innerText > 1 ? countdown.innerText-- : (countdown.innerText--, draw.style.display = 'inline');
     }
 
+    // Scores updates logic, acting on the relevant section and based on checkWinner() possible outcomes:
     if (resultInnerText === 'You Won!') {
         playerScore.innerText++;
     } else if (resultInnerText === 'Computer Won!') {
         computerScore.innerText++;
     }
 
-    if (countdown.innerText === 0) {
-        message.innerText = 'Tie-break!';
-    }
-
+    // Game Over logic, based on the simple, yet dynamic, rule of winning 5 out of (maximum) 9 times:
     if (Math.abs(playerScore.innerText - computerScore.innerText) > countdown.innerText) {
         if (playerScore.innerText > computerScore.innerText) {
-            message.innerText = 'Game Over';
+            message.firstElementChild.innerText = 'Game Over';
             result.innerText = 'You Won The Match!';
             for (const move of moves) {move.style.display="none";}
             reloadButton.style.display = 'block';
         } else {
-            message.innerText = 'Game Over';
+            message.firstElementChild.innerText = 'Game Over';
             result.innerText = 'You Lost The Match!';
             for (const move of moves) {move.style.display="none";}
             reloadButton.style.display = 'block';
         }
     }
 
+    // Play-again logic, simply based on a page refresh and upon button availability after game over condition is met:
     reloadButton.addEventListener('click', function () {
         window.location.reload();
     })

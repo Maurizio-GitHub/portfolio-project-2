@@ -101,10 +101,14 @@ button {
 
 /* Game Area Messages */
 
-#moves-left {
+#display-message {
     clear: both;
     font-size: 87%;
     padding: 1rem 0 1rem 0;
+}
+
+#draw-event {
+    display: none;
 }
 
 #outcomes-area {
@@ -141,7 +145,7 @@ button {
         font-size: 110%;
     }
 
-    #moves-left {
+    #display-message {
         font-size: 105%;
     }
 
