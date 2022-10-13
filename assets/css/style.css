@@ -55,11 +55,11 @@ h2 {
 button {
     border-radius: 0.5rem;
     cursor: pointer;
-    font-size: 105%;
+    font-size: 85%;
     font-weight: 600;
     height: 2.5rem;
     margin: 0.6rem 0.2rem 1.2em;
-    width: 5rem;
+    width: 3.7rem;
 }
 
 .moves {
@@ -135,12 +135,14 @@ button {
 /* Media Queries */
 
 @media screen and (min-width: 350px) {
-    header {
+    header,
+    #game-area {
         font-size: inherit;
     }
 
-    #game-area {
-        font-size: inherit;
+    button {
+        font-size: 105%;
+        width: 5rem;
     }
 
     .scores {
@@ -157,10 +159,7 @@ button {
 }
 
 @media screen and (min-width: 600px) {
-    #player-image {
-        width: 67%
-    }
-
+    #player-image,
     #computer-image {
         width: 67%
     }
