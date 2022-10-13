@@ -164,14 +164,11 @@ button {
         width: 67%
     }
 
-    .scores {
-        font-size: 110%;
-    }
-
     #display-message {
         font-size: 105%;
     }
 
+    .scores,
     #outcomes-area {
         font-size: 110%;
     }

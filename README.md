@@ -4,11 +4,11 @@ This is a very simple website, built to engage users with an enjoyable pastime: 
 
 The site mainly targets people who typically are casual or regular pastime-consumers, like the ones who enjoy spending a few hours a week with solitaires and other similar games.
 
-![Responsiveness](/assets/media/site-responsiveness.png "Responsive Design")
+![Responsiveness](/assets/media/responsiveness.png "Responsive Design")
 
 <br>
 
-[Live link to NFTs For Dummies](https://maurizio-github.github.io/portfolio-project-1/)
+[Live link to Rock, Paper, Scissors, Lizard, Spock?](https://maurizio-github.github.io/portfolio-project-2/)
 
 <br>
 
@@ -34,59 +34,23 @@ The site mainly targets people who typically are casual or regular pastime-consu
 
 <br>
 
-- Navigation menu
+- Simple header with a call to action
 
-    - Featured on every page, a responsive navigation menu includes links to the website Home page, Milestones, Digital Art and Newsletter page. It is identical in each page to allow for easy navigation: users can surf from page to page across all devices without having to revert back to the previous page via the 'back' button. Each page-link is accompanied by an elegant icon conceptually representing the section it refers to:
-
-![Navigation menu](/assets/media/navigation-menu.png "Navigation Menu")
-
-<br>
-
-- Landing page hero image
-
-    - The landing page introduces the users to the topic with an eye catching animation, purposely added to grab their attention:
-
-![Animation](/assets/media/nft-animation.png "Hero Image")
+    - It welcomes the players with a neat sentence, immediately inviting them to act on the buttons (with visual feedback on hover) below it in order to start a new game:
+    ![Buttons](/assets/media/buttons.png "Buttons")
 
 <br>
 
-- Basics section
+- Game area with scores and feedback messages
 
-    - This section hosts the main concepts and help the user understand what NFTs and Blockchain are:
-
-![Animation](/assets/media/main-contents.png "Main Contents")
-
-<br>
-
-- Footer
-
-    - The footer section encourages the user to keep in touch via social media: it contains a written invitation as a valuable call to action and includes links to the relevant social media pages. Each link opens to a new tab to allow for an easier navigation:
-
-![Footer with call to action](/assets/media/footer-links.png "Footer")
-
-<br>
-
-- Milestone page
-
-    - A vertical, responsive timeline, showcasing the most important milestones achieved by the NFT world, was added to show the user how compelling this continuous evolution has been so far:
-
-![Timeline](/assets/media/milestones-timeline.png "Timeline")
-
-<br>
-
-- Digital Art page
-
-    - This section was added to introduce newbies and content creators to the real revolution taking place in the world of digital art thanks to NFTs. Complex, yet easily explained concepts, accompanied by a brief historical excursus, are followed by curiosities and upheavals in the world of art. In addition, the much talked about artwork of Beeple is shown, with a direct, external link to the mind-boggling auction ended on March 11, 2021:
-
-![Beeple's artwork](/assets/media/digital-art.png "Beeple's Artwork")
-
-<br>
-
-- Newsletter page
-
-    - This page allows the user to subscribe to NFTs For Dummies' Newsletter, a weekly collection of valuable information and analyses about the NFTs world. The user is asked to submit their full name and email address:
-
-![Subscription form](/assets/media/subscription-form.png "Subscription Form")
+    - Before a new game starts, this area provides players with a nice couple of pictures depicting the game rules. They just differ in their colours, in relation to player-side and computer-side respectively:
+    ![Game Rules](/assets/media/images-area.png "Game Rules")
+    - Once the game is running, pictures change to reflect player and computer choices, scores get updated based on game rules, moves left decrement accordingly and a feedback message appear to the bottom to clearly state who scored (i.e. who won):
+    ![Game Area](/assets/media/game-area.png "Game Area")
+    - After the 9 regular moves - if you got there - since it always depends on the total scores made during the game (whose winner must score 5 out of 9), in case of a draw (of course, regardless that the very last move ends up with a "Draw!" - as in the case depicted below - or not), a tie-break phase starts. Just next to the counter saying that there are no moves left, a very clear feedback message says that. This phase goes on, possibly through other draws, until one of the opponents scores and the game over condition is met with a clear winner:
+    ![Tie-Break](/assets/media/tie-break.png "Tie-Break")
+    - When the game over condition is finally met, a final message clearly stating who won the game is shown. The moves-buttons disappear and a restart button pops up (also this one with feedback on hover) to invite players to enter a new game:
+    ![Game Over](/assets/media/game-over.png "Game Over")
 
 <br>
 
@@ -100,8 +64,8 @@ The site mainly targets people who typically are casual or regular pastime-consu
 
 - The website was successfully tested on different browsers: Chrome, Edge, Safari.
 - The website is responsive and looks good on different devices. Its functioning was successfully tested on all standard screen sizes by using Chrome DevTools as well as [Am I Responsive?](https://ui.dev/amiresponsive)
-- I confirmed that any single navigation element and piece of text is readable, easy to understand and fully accessible.
-- I confirmed that the subscription form properly works. It requires entries on every field, will only accept an email in the relevant field and the 'Join' button does exactly what it was designed to do.
+- I confirmed that any single piece of text is readable, easy to understand and fully accessible.
+- I confirmed that the whole Javascript logic addressing the game rules and every possible outcome properly works.
 
 <br>
 
