@@ -21,6 +21,7 @@ body {
 /* Header and Footer Elements */
 
 header {
+    font-size: 78%;
     max-height: 7rem;
     text-align: center;
     padding: 1rem;
@@ -47,6 +48,7 @@ footer {
 }
 
 h2 {
+    font-size: 138%;
     padding: 0.5rem 0 1.5rem 0;
 }
 
@@ -96,7 +98,7 @@ button {
 }
 
 .scores {
-    font-size: 87%;
+    font-size: 70%;
 }
 
 /* Game Area Messages */
@@ -131,6 +133,28 @@ button {
 }
 
 /* Media Queries */
+
+@media screen and (min-width: 350px) {
+    header {
+        font-size: inherit;
+    }
+
+    #game-area {
+        font-size: inherit;
+    }
+
+    .scores {
+        font-size: 90%;
+    }
+
+    #display-message {
+        font-size: 100%;
+    }
+
+    #outcomes-area {
+        font-size: 105%;
+    }
+}
 
 @media screen and (min-width: 600px) {
     #player-image {
