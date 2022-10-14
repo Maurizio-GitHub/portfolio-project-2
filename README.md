@@ -79,7 +79,7 @@ The site mainly targets people who typically are casual or regular pastime-consu
 
 - HTML
 
-    - No errors found via the official [W3C validator](https://validator.w3.org/nu/).
+    - No errors found via the official [W3C validator](https://validator.w3.org/#validate_by_input).
 
 <br>
 
@@ -89,11 +89,16 @@ The site mainly targets people who typically are casual or regular pastime-consu
 
 <br>
 
+- Javascript
+
+    - No errors found via [JSHint](https://jshint.com/).
+
+<br>
+
 - Accessibility
 
     - I confirmed that both colors and fonts chosen are easy to read and tested accessibility via Lighthouse, within Chrome DevTools:
-
-![Lighthouse](/assets/media/performance-lighthouse.png "Performance Analysis")
+    ![Lighthouse](/assets/media/performance-lighthouse.png "Performance Analysis")
 
 <br>
 
@@ -107,19 +112,19 @@ The site mainly targets people who typically are casual or regular pastime-consu
 
 - Fixed bugs
 
-    - The home page, at the very beginning, had not been built with a mobile-first approach. This resulted in a poor mobile experience, net of the necessary media queries added. Therefore, by changing approach, the code became easier to (re)write and the page much better to look at.
+    - There were some logic issues in properly handling the tie-break phase. Everything was fixed and retest after reviewing a few lines of JS code. Relevant comments have also been added to the code for reference.
 
 <br>
 
 - Unfixed bugs
 
-    - There is a weird rendering issue affecting Title and Navigation Menu on some 2018 Apple devices (iPhone XS Max and MacBook Air), whose root cause has not been possible to identify yet, either via searching for it on tech forums or via YouTube. No compatibility issues seem to be involved with respect to the code used.
+    - No bugs at this writing.
 
 <br>
 
 - Future developments
 
-    - Home page is not 4K-optimized, as current choices of hero image and textual contents do not provide the same immersive experience they have for lower resolutions. Future developments will address this by looking for more advanced media contents and the addition of some extra information.
+    - Since it is just a simple game, with no need to capture user choices, any impression of 'overengineering' has been averted. Yet, it could still make sense to move the comparison logic used in the checkWinner() function in a data structure, i.e. via an array of dictionaries, with each element representing everything we need to know about a specific move.
 
 <br>
 
@@ -139,7 +144,7 @@ The site mainly targets people who typically are casual or regular pastime-consu
 
 <br>
 
-The live link can be found here: [NFTs For Dummies](https://maurizio-github.github.io/portfolio-project-1/).
+The live link can be found here: [Rock, Paper, Scissors, Lizard, Spock?](https://maurizio-github.github.io/portfolio-project-2/).
 
 <br>
 
@@ -153,13 +158,13 @@ The live link can be found here: [NFTs For Dummies](https://maurizio-github.gith
 
 - Content
 
-    - Ready-to-use code, to make and properly format the navigation menu, the hero image animation and part of the footer, was taken from Coding Institute's [Love Running](https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode) project.
+    - Ready-to-use code, making the very first part of the project was taken and properly adapted from Coding Institute's [Love Maths](https://github.com/Code-Institute-Org/love-maths) project.
 
 <br>
 
 - Media
 
-    - Every image presented was taken from [Pexel](https://www.pexels.com/), apart from the picture representing Beeple's artwork, which was taken directly from [Christie's](https://onlineonly.christies.com/s/beeple-first-5000-days/beeple-b-1981-1/112924?ldp_breadcrumb=back).
+    - Every image presented was taken from [ClipArtMax](https://www.clipartmax.com/), apart from the pictures representing the game rules, which were taken from the web.
 
 <br>
 

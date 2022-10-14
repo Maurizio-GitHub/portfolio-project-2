@@ -110,5 +110,5 @@ function gameManager(resultInnerText) {
     // Play-again logic, simply based on a page refresh and upon button availability after game over condition is met:
     reloadButton.addEventListener('click', function () {
         window.location.reload();
-    })
+    });
 }
