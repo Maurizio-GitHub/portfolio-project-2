@@ -124,7 +124,7 @@ The site mainly targets people who typically are casual or regular pastime-consu
 
 - Future developments
 
-    - Since it is just a simple game, with no need to capture user choices, any impression of 'overengineering' has been averted. Yet, it could still make sense to move the comparison logic used in the checkWinner() function in a data structure, i.e. via an array of dictionaries, with each element representing everything we need to know about a specific move.
+    - Since it is just a simple game, with no need to capture user choices, any impression of 'overengineering' has been averted. Yet, it could still make sense to move the comparison logic used within the checkWinner() function to a data structure, i.e. an array of dictionaries, with each element representing everything we need to know about a specific move against any others.
 
 <br>
 
