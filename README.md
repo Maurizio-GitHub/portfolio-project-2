@@ -45,11 +45,11 @@ The site mainly targets people who typically are casual or regular pastime-consu
 
     - Before a new game starts, this area provides players with a nice couple of pictures depicting the game rules. They just differ in their colours, in relation to player-side and computer-side respectively:
     ![Game Rules](/assets/media/images-area.png "Game Rules")
-    - Once the game is running, pictures change to reflect player and computer choices, scores get updated based on game rules, moves left decrement accordingly and a feedback message appear to the bottom to clearly state who scored (i.e. who won):
+    - Once the game is running, pictures change to reflect player and computer choices, scores get updated based on game rules, moves left decrement accordingly and a feedback message appears to the bottom to clearly state who scored (i.e. who won):
     ![Game Area](/assets/media/game-area.png "Game Area")
-    - After the 9 regular moves - if you got there - since it always depends on the total scores made during the game (whose winner must score 5 out of 9), in case of a draw (of course, regardless that the very last move ends up with a "Draw!" - as in the case depicted below - or not), a tie-break phase starts. Just next to the counter saying that there are no moves left, a very clear feedback message says that. This phase goes on, possibly through other draws, until one of the opponents scores and the game over condition is met with a clear winner:
+    - After the 9 regular moves - if you got there - as it always depends on the total scores made during the game (whose winner must score 5 out of 9), in case of a draw (of course, regardless that the very last move ends up with a "Draw!", as in the case depicted below, or not), a tie-break phase starts. Just next to the counter saying that there are no moves left, a very clear feedback message warns about that:
     ![Tie-Break](/assets/media/tie-break.png "Tie-Break")
-    - When the game over condition is finally met, a final message clearly stating who won the game is shown. The moves-buttons disappear and a restart button pops up (also this one with feedback on hover) to invite players to enter a new game:
+    - Tie-break phase goes on, possibly going through other draws, until one of the opponents scores and the game over condition is met. When this finally happens, one last message clearly stating who won the game is shown. The moves-buttons disappear and a restart button pops up (also this one with feedback on hover) to invite players to enter a new game:
     ![Game Over](/assets/media/game-over.png "Game Over")
 
 <br>
@@ -158,7 +158,7 @@ The live link can be found here: [Rock, Paper, Scissors, Lizard, Spock?](https:/
 
 - Content
 
-    - Ready-to-use code, making the very first part of the project was taken and properly adapted from Coding Institute's [Love Maths](https://github.com/Code-Institute-Org/love-maths) project.
+    - Ready-to-use code, making the very first part of the project, was taken and **properly adapted** from Coding Institute's [Love Maths](https://github.com/Code-Institute-Org/love-maths) project.
 
 <br>
 

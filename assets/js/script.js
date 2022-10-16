@@ -78,6 +78,9 @@ function checkWinner(playerImageAlt, computerImageAlt) {
 
 /**
  * Manager function: it accepts a string as a parameter to appropriately modify the page after each result.
+ * 
+ * To keep the code concisely cleaner, 'Postfix Decrement/Increment Operator' coercive behavior (string to number) has been leveraged.
+ * Likewise, 'Greater Than' implicit coercion (string to number) has been exploited.
  */
 function gameManager(resultInnerText) {
     // Counter management logic, necessary to handle an extended tie-break phase without having a countdown going below zero (see Game Over logic):
@@ -97,12 +100,16 @@ function gameManager(resultInnerText) {
         if (playerScore.innerText > computerScore.innerText) {
             message.firstElementChild.innerText = 'Game Over';
             result.innerText = 'You Won The Match!';
-            for (const move of moves) {move.style.display="none";}
+            for (const move of moves) {
+                move.style.display = "none";
+            }
             reloadButton.style.display = 'block';
         } else {
             message.firstElementChild.innerText = 'Game Over';
             result.innerText = 'You Lost The Match!';
-            for (const move of moves) {move.style.display="none";}
+            for (const move of moves) {
+                move.style.display = "none";
+            }
             reloadButton.style.display = 'block';
         }
     }
