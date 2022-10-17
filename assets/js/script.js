@@ -11,6 +11,7 @@ const draw = document.getElementById('draw-event');
 const result = document.getElementById('result');
 const reloadButton = document.getElementById('reload');
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+const outcomes = ['You Won!', 'Computer Won!', 'Draw!'];
 
 // Event listener for buttons representing a player move; runGame function is called:
 
@@ -42,6 +43,10 @@ function runGame(playerChoice) {
 
 /**
  * Check function: it accepts 2 strings as parameters to check who the winner is.
+ *
+ * Since no data structures have been used, possible choices combinations have been explicitly written down as strings for the sake of readability.
+ * An opposite decision was made for 'outcomes', as they are also needed within the gameManager() function.
+ * So, to facilitate code maintenance, non-centralized hardcoding of pieces of code used in different places has been willingly avoided.
  */
 function checkWinner(playerImageAlt, computerImageAlt) {
     switch (playerImageAlt + ' vs ' + computerImageAlt) {
@@ -55,7 +60,7 @@ function checkWinner(playerImageAlt, computerImageAlt) {
         case 'lizard vs spock':
         case 'spock vs scissors':
         case 'spock vs rock':
-            return 'You Won!';
+            return outcomes[0];
         case 'scissors vs rock':
         case 'lizard vs rock':
         case 'rock vs paper':
@@ -66,21 +71,21 @@ function checkWinner(playerImageAlt, computerImageAlt) {
         case 'spock vs lizard':
         case 'scissors vs spock':
         case 'rock vs spock':
-            return 'Computer Won!';
+            return outcomes[1];
         case 'rock vs rock':
         case 'paper vs paper':
         case 'scissors vs scissors':
         case 'lizard vs lizard':
         case 'spock vs spock':
-            return 'Draw!';
+            return outcomes[2];
     }
 }
 
 /**
  * Manager function: it accepts a string as a parameter to appropriately modify the page after each result.
- * 
+ *
  * To keep the code concisely cleaner, 'Postfix Decrement/Increment Operator' coercive behavior (string to number) has been leveraged.
- * Likewise, 'Greater Than' implicit coercion (string to number) has been exploited.
+ * Likewise, 'Greater Than Operator' implicit coercion (string to number) has been exploited.
  */
 function gameManager(resultInnerText) {
     // Counter management logic, necessary to handle an extended tie-break phase without having a countdown going below zero (see Game Over logic):
@@ -89,9 +94,9 @@ function gameManager(resultInnerText) {
     }
 
     // Scores updates logic, acting on the relevant section and based on checkWinner() possible outcomes:
-    if (resultInnerText === 'You Won!') {
+    if (resultInnerText === outcomes[0]) {
         playerScore.innerText++;
-    } else if (resultInnerText === 'Computer Won!') {
+    } else if (resultInnerText === outcomes[1]) {
         computerScore.innerText++;
     }
 
@@ -100,16 +105,12 @@ function gameManager(resultInnerText) {
         if (playerScore.innerText > computerScore.innerText) {
             message.firstElementChild.innerText = 'Game Over';
             result.innerText = 'You Won The Match!';
-            for (const move of moves) {
-                move.style.display = "none";
-            }
+            for (const move of moves) {move.style.display = "none";}
             reloadButton.style.display = 'block';
         } else {
             message.firstElementChild.innerText = 'Game Over';
             result.innerText = 'You Lost The Match!';
-            for (const move of moves) {
-                move.style.display = "none";
-            }
+            for (const move of moves) {move.style.display = "none";}
             reloadButton.style.display = 'block';
         }
     }
